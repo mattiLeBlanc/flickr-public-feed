@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   endpoints: {
-    flickr: 'http://localhost:3000/feeds'
+    flickr: 'http://localhost:3001/feeds'
   }
 };
 
