@@ -1,4 +1,29 @@
-# Client
+# Flickr-Feed
+
+See the app in action on: https://mspi-flickr-feed.herokuapp.com/ on your phone or desktop.
+
+The app responsive with a little bit of a different behaviour for mobile devices (no list view there unless landscape).
+
+**Note**
+
+*Ideally I would have cut up the `list.component` into a couple of smaller components, but since I was using Material Design with the Grid it didn't really make sensse. I could move the searchbox to a separate component but it is thightly coupled with the grid list so I left it as is.*
+
+## Run locally
+
+Two options:
+
+1) Run `node app.js` in a separate terminal to acts as the API Endpoint. Then run `ng serve` and view the app on `localhost:4200`.
+
+2) First build with `ng build` and then serve the dist folder by running `node app.js` and view the app on `localhost:3001`.
+
+## Running tests
+
+Run `ng test` but make sure you are also running `node app.js` because I am not mocking the data services at the moment.
+
+I didn't write all the tests because I think I already did enough for the technical test (during my holiday)
+
+----------------------------------------------------------------
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 

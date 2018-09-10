@@ -1,9 +1,8 @@
 import {
   Component,
-  Input,
   OnInit,
 } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialog } from '@angular/material';
 
 
 import { Image } from '../../models/image';
@@ -38,6 +37,8 @@ export type gridView = 'list' | 'grid';
         </app-list-display-toggle>
       </div>
 
+      <div *ngIf="!feedItems.length" class="episode-loading">Couldn't find anything matching "{{searchValue.value}}"</div>
+
       <mat-grid-list [cols]="gridCols" [rowHeight]="gridRatio" gutterSize="20">
         <mat-grid-tile *ngFor="let image of feedItems">
 
@@ -62,7 +63,7 @@ export type gridView = 'list' | 'grid';
         </mat-grid-tile>
       </mat-grid-list>
 
-      <div *ngIf="!feedItems.length" class="episode-loading">Couldn't find anything matching "{{searchValue.value}}"</div>
+
 
     </div>
   `,
@@ -73,7 +74,7 @@ export class ListComponent implements OnInit {
   feedItems$: Observable<Image[]>;
   gridView: gridView = 'grid';
   gridCols = 1;
-  gridRatio: '10:1' | '1:1' = '10:1';
+  gridRatio: '7:1' | '1:1' = '7:1';
   showGridViewToggle = true;
 
 
@@ -128,7 +129,7 @@ export class ListComponent implements OnInit {
   onToggle( event: gridView ) {
     this.gridView = event;
     this.gridCols = this.gridView === 'list' ? 1 : 2;
-    this.gridRatio = this.gridView === 'list' ? '10:1' : '1:1';
+    this.gridRatio = this.gridView === 'list' ? '7:1' : '1:1';
 
   }
 
@@ -139,12 +140,12 @@ export class ListComponent implements OnInit {
       data: {
         url: image.img
       }
-    });
+    } );
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+    dialogRef.afterClosed().subscribe( result => {
+      console.log( 'The dialog was closed' );
 
-    });
+    } );
   }
 
 }
