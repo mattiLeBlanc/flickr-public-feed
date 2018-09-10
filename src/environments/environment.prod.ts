@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   endpoints: {
-    flickr: 'http://localhost:3001/feeds'
+    flickr: 'https://mspi-flickr-feed.herokuapp.com/feeds'
   }
 };
