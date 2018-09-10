@@ -1,0 +1,34 @@
+:host {
+  display: block;
+
+  .mat-grid-tile {
+    border: 1px solid #9E9E9E;
+
+    .grid-tile-body {
+      padding: 10px;
+      background-position: top left;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+    }
+
+
+    mat-grid-tile-header {
+      background: rgba(0,0,0,.5);
+      .open-dialog-icon {
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+
+    mat-grid-tile-footer {
+      background: inherit;
+      overflow-x: scroll;
+      ::ng-deep .mat-chip-list-wrapper {
+        width: 100%;
+        flex-wrap: inherit;
+      }
+    }
+  }
+}

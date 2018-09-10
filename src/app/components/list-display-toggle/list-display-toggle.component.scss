@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  padding-bottom: 1.34375em;
+
+  .icon {
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+    &.active {
+      background-color: #534d5f;
+      border-radius: 3px;
+    }
+  }
+}
