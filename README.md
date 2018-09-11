@@ -2,7 +2,7 @@
 
 See the app in action on: https://mspi-flickr-feed.herokuapp.com/ on your phone or desktop.
 
-The app responsive with a little bit of a different behaviour for mobile devices (no list view there unless landscape).
+The app is responsive with a little bit of a different behaviour for mobile devices (no list view there unless landscape).
 
 **Note**
 
